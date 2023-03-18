@@ -5,4 +5,10 @@ min-height: 100vh;
 }
 .details{
     color: #fff;
+    padding-top: 50px;
+}
+
+.dtl{
+    color: white;
+    text-decoration: none;
 }

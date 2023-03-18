@@ -97,7 +97,7 @@ function Details() {
                     </div>
                     <br />
                     <div class="form-group">
-                        <label class="control-label col-2">Resting electrocardiographic result :</label>
+                        <label class="control-label col-2">Resting electrocardiographic result:</label>
                         <input type="radio" id="0r" name="re" value="0" />
                         <label class="col-1 re" for="0r">0</label>
                         <input type="radio" id="1r" name="re" value="1" />
