@@ -1,7 +1,18 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './details.css';
+import Popover from '@mui/material/Popover';
+import Typography from '@mui/material/Typography';
 function Details() {
+    var _a = React.useState(null), anchorEl = _a[0], setAnchorEl = _a[1];
+    var handleClick = function (event) {
+        setAnchorEl(event.currentTarget);
+    };
+    var handleClose = function () {
+        setAnchorEl(null);
+    };
+    const open = Boolean(anchorEl);
+    const id = open ? 'simple-popover' : undefined;
     return (
         <div className='whole'>
             <div className='container'>
@@ -29,7 +40,20 @@ function Details() {
                         <div class="col-sm-3">
                             <input type="text" class="form-control" />
                         </div>
-                        <label className='control-label col-sm-2 offset-1'>Serum cholestoral :</label>
+                        <a className='control-label col-sm-2 offset-1' aria-describedby={id} variant="contained" onClick={handleClick}>Serum cholestoral :
+                        </a>
+                        <Popover
+                            id={id}
+                            open={open}
+                            anchorEl={anchorEl}
+                            onClose={handleClose}
+                            anchorOrigin={{
+                                vertical: 'bottom',
+                                horizontal: 'left',
+                            }}
+                        >
+                            <Typography sx={{ p: 2 }}>The content of the Popover.</Typography>
+                        </Popover>
                         <div class="col-sm-3">
                             <input type="text" class="form-control" placeholder="In mg/dl" />
                         </div>
@@ -40,25 +64,25 @@ function Details() {
                         <div class="col-sm-3">
                             <input type="text" class="form-control" />
                         </div>
-                        <label className='control-label col-sm-2 offset-1'>Exercise induced angina :</label>
+                        <a className='control-label col-sm-2 offset-1' aria-describedby={id} variant="contained" onClick={handleClick}>Exercise induced angina :</a>
                         <div class="col-sm-3">
                             <input type="text" class="form-control" />
                         </div>
                     </div>
                     <br />
                     <div class="form-group row">
-                        <label className='control-label col-sm-2'>Oldpeak :</label>
+                        <label className='control-label col-sm-2' aria-describedby={id} variant="contained" onClick={handleClick}>Oldpeak :</label>
                         <div class="col-sm-3">
                             <input type="text" class="form-control" />
                         </div>
-                        <label className='control-label col-sm-2 offset-1'>Slope ST :</label>
+                        <label className='control-label col-sm-2 offset-1' aria-describedby={id} variant="contained" onClick={handleClick}>Slope ST :</label>
                         <div class="col-sm-3">
                             <input type="text" class="form-control" />
                         </div>
                     </div>
                     <br />
                     <div class="form-group row">
-                        <label className='control-label col-sm-2'>Thall :</label>
+                        <label className='control-label col-sm-2' aria-describedby={id} variant="contained" onClick={handleClick}>Thall :</label>
                         <div class="col-sm-3">
                             <input type="text" class="form-control" />
                         </div>
@@ -97,7 +121,7 @@ function Details() {
                     </div>
                     <br />
                     <div class="form-group">
-                        <label class="control-label col-2">Resting electrocardiographic result:</label>
+                        <label class="control-label col-2" aria-describedby={id} variant="contained" onClick={handleClick}>Resting electrocardiographic result:</label>
                         <input type="radio" id="0r" name="re" value="0" />
                         <label class="col-1 re" for="0r">0</label>
                         <input type="radio" id="1r" name="re" value="1" />
@@ -113,7 +137,7 @@ function Details() {
                     </div>
                 </form>
 
-            </div>
+            </div >
         </div >
     )
 }
