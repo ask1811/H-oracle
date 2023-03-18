@@ -6,7 +6,7 @@ const Login = () => {
     return (
         
         <div className='login-wrapper container'>
-            <div className="content ">
+            <div >
                 <form name="my" class="form">
                     <h2>Log In</h2>
                     <div className="input-group">
