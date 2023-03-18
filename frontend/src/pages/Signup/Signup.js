@@ -2,38 +2,39 @@ import React from 'react'
 import './Signup.css'
 const Signup = () => {
     return (
-        <div className='signup-wrapper container'>
+        <div className='motham'>
+            <div className='signup-wrapper container'>
+                <div>
+                    <form name="my" class="form">
+                        <h2>Sign Up</h2>
+                        <div className="input-group">
+                            <input type="text" name="name" id="loginUser" />
+                            <label for="loginUser">Name</label>
+                        </div>
+                        <div className="input-group">
+                            <input type="text" name="email" id="signupUser" />
+                            <label for="signupUser">E-mail</label>
+                        </div>
+                        <div className="input-group">
+                            <input
+                                type="password"
+                                name="password"
+                                id="loginPassword"
 
-            <div>
-                <form name="my" class="form">
-                    <h2>Sign Up</h2>
-                    <div className="input-group">
-                        <input type="text" name="name" id="loginUser" />
-                        <label for="loginUser">Name</label>
-                    </div>
-                    <div className="input-group">
-                        <input type="text" name="email" id="signupUser" />
-                        <label for="signupUser">E-mail</label>
-                    </div>
-                    <div className="input-group">
-                        <input
-                            type="password"
-                            name="password"
-                            id="loginPassword"
+                                required
+                            />
+                            <label for="loginPassword">Password</label>
+                        </div>
 
-                            required
-                        />
-                        <label for="loginPassword">Password</label>
-                    </div>
+                        {
+                            <button type="submit" className="submit-btn" >Signup</button>
+                        }
 
-                    {
-                        <button type="submit" className="submit-btn" >Signup</button>
-                    }
+                    </form>
 
-                </form>
-
+                </div >
             </div >
-        </div >
+        </div>
     )
 }
 
