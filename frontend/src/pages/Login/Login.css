@@ -124,3 +124,7 @@
     text-decoration: none;
     color: inherit;
   }
+.motham{
+  background-color: violet;
+  min-height: 100vh;
+}
