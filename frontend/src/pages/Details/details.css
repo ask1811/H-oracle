@@ -2,7 +2,19 @@
     text-align: center;
     padding-top: 20px;
 }
-
+.container{
+    background-color: black;
+    color: white;
+}
 .bs, .re, .cp, .mv{
     padding-left: 5px;
+}
+
+.whole{
+   background-image: url(../../Images/heart.png);
+   background-size:cover;
+   height: 100%;
+}
+.footer{
+    background-color: black;
 }
