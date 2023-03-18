@@ -21,22 +21,10 @@ const Login = () => {
                         />
                         <label for="loginPassword">Password</label>
                     </div>
-                    <p>Please select user</p>
-                    <input type="radio" id="owner" name="user" value="Owner" onChange={() => {
-                    }} />
-                    <label for="owner">Owner</label>
-                    <input type="radio" id="tenant" name="user" value="Tenant" onChange={() => {
-                    }} />
-                    <label for="tenant">Tenant</label>
-                    {
-                        <button type="submit" className="submit-btn" onClick={(e) => {
-                            e.preventDefault();
-                        }}>Login</button>
-                    }
-                    {
-                        <button type="submit" className="submit-btn" onClick={(e) => {
-                            e.preventDefault();
 
+                    {
+                        <button type="submit" className="submit-btn" onClick={(e) => {
+                            e.preventDefault();
                         }}>Login</button>
                     }
 

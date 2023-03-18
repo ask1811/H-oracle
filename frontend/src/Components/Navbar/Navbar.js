@@ -1,12 +1,15 @@
 import React from 'react'
 import './Navbar.css';
+import logo from '../../Images/logo.png'
+
 const Navbar = () => {
   return (
     <div class="nav">
       <input type="checkbox" id="nav-check" />
       <div class="nav-header">
+        <img class='logo' src={logo} />
         <div class="nav-title">
-          H-oracle
+          <a href="/" target="_self">H-oracle</a>
         </div>
       </div>
       <div class="nav-btn">
@@ -23,7 +26,7 @@ const Navbar = () => {
           <span class="comments"></span>
         </a>
       </div>
-    </div>
+    </div >
   )
 }
 
