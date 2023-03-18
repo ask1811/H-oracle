@@ -114,8 +114,6 @@ function Details() {
                 </form>
 
             </div>
-            <footer className='footer'>
-            </footer>
         </div >
     )
 }
