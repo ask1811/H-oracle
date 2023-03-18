@@ -9,7 +9,9 @@ const Navbar = () => {
       <div class="nav-header">
         <img class='logo' src={logo} />
         <div class="nav-title">
-          <a href="/" target="_self">H-oracle</a>
+          <a href="/" target="_self" className='btn0'>
+            <span class="replies">H-oracle</span>
+          </a>
         </div>
       </div>
       <div class="nav-btn">
