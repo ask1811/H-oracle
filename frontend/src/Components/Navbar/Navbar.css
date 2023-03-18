@@ -8,7 +8,7 @@ body {
 }
 
 .nav {
-  height: 100px;
+  height: 50px;
   width: 100%;
   background-color: #000;
   display: flex;
@@ -22,7 +22,7 @@ body {
 
 .nav > .nav-header > .nav-title {
   display: inline-block;
-  font-size: 50px;
+  font-size: 22px;
   color: #fff;
   padding: 10px 10px 10px 10px;
  
@@ -100,10 +100,10 @@ body {
   }
 }
 .logo{
-  height: 75px;
-  width: 75px;
-   margin-top: 1px; 
+  height: 40px;
+  width: 40px;
+  margin-top: 1px; 
 }
 .nav> .nav-links> a> .replies{
-  font-size: 50px;
+  font-size: 22px;
 }

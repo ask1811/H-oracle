@@ -1,13 +1,13 @@
 import React from 'react'
 import './Navbar.css';
-import logo from '../../Images/logo.png'
+import translogo from '../../Images/translogo.png'
 
 const Navbar = () => {
   return (
     <div class="nav">
       <input type="checkbox" id="nav-check" />
       <div class="nav-header">
-        <img class='logo' src={logo} />
+        <img class='logo' src={translogo} />
         <div class="nav-title">
           <a href="/" target="_self" className='btn0'>
             <span class="replies">H-oracle</span>
