@@ -4,7 +4,7 @@ const Signup = () => {
     return (
         <div>
 
-            <div className="content">
+            <div className="content1">
                 <form name="my" onSubmit="usePage(this,event)" action="" class="form">
                     <h2>Sign Up</h2>
                     <div className="input-group">
@@ -33,8 +33,6 @@ const Signup = () => {
                     }
 
                 </form>
-                <a className='sig' href="/signup" target="_self">Click here to signup</a>
-
 
             </div>
         </div>

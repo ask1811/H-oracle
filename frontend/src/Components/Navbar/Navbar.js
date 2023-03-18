@@ -23,10 +23,15 @@ const Navbar = () => {
             </div>
 
             <div class="nav-links">
-                <a href="/login" target="_self" className='btn1'>
+                <a href="/Details" target="_self" className='btn1'>
+                    <span class="replies">Details</span>
+                    <span class="comments"></span>
+                </a>
+                <a href="/Login" target="_self" className='btn1'>
                     <span class="replies">Login</span>
                     <span class="comments"></span>
                 </a>
+
             </div>
         </div >
     )
