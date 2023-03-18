@@ -8,8 +8,8 @@
   }
   .form {
     position: relative;
-    width: 100%;
-    max-width: 380px;
+    
+    width: 380px;
     padding: 80px 40px 40px;
     background: black;
     border-radius: 10px;
@@ -124,4 +124,3 @@
     text-decoration: none;
     color: inherit;
   }
-  

@@ -2,10 +2,10 @@ import React from 'react'
 import './Signup.css'
 const Signup = () => {
     return (
-        <div>
+        <div className='signup-wrapper container'>
 
-            <div className="content1">
-                <form name="my" onSubmit="usePage(this,event)" action="" class="form">
+            <div>
+                <form name="my" class="form">
                     <h2>Sign Up</h2>
                     <div className="input-group">
                         <input type="text" name="name" id="loginUser" />
@@ -27,15 +27,13 @@ const Signup = () => {
                     </div>
 
                     {
-                        <button type="submit" className="submit-btn" onClick={(e) => {
-                            e.preventDefault();
-                        }}>Login</button>
+                        <button type="submit" className="submit-btn" >Signup</button>
                     }
 
                 </form>
 
-            </div>
-        </div>
+            </div >
+        </div >
     )
 }
 
