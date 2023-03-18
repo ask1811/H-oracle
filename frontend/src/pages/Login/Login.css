@@ -1,13 +1,13 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  body {
+  } */
+  /* body {
     background-color: rgb(219, 217, 217);
     background-size: cover;
     font-family: sans-serif;
-  }
+  } */
   .login-wrapper {
     height: 100vh;
     width: 100vw;
@@ -20,7 +20,7 @@
     width: 100%;
     max-width: 380px;
     padding: 80px 40px 40px;
-    background: rgba(96,39,117, 1);
+    background: black;
     border-radius: 10px;
     color: #ffff;
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
@@ -87,14 +87,21 @@
     margin-left: auto;
     border: none;
     outline: none;
-    background: #ff652f;
+    background: red;
     font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    color: white;
   }
+
+  .sig{
+    color: red;
+    text-decoration: none;
+  }
+
   .forgot-pw {
     color: inherit;
   }
