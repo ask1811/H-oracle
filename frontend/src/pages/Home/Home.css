@@ -1,0 +1,8 @@
+.content{
+    background-image: url(../../Images/heart.png);
+    background-size: cover;
+min-height: 100vh;
+}
+.details{
+    color: #fff;
+}

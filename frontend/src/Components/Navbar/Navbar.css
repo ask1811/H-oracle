@@ -17,15 +17,19 @@ body {
 }
 
 .nav > .nav-header {
-  display: inline;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 10px;
+  align-items: center;
 }
 
-.nav > .nav-header > .nav-title {
+.nav > .nav-header > .nav-title> a {
   display: inline-block;
   font-size: 22px;
   color: #fff;
-  padding: 10px 10px 10px 10px;
- 
+  text-decoration: none;
+
 }
 
 .nav > .nav-btn {
