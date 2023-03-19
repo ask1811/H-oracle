@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use(cors());
 //const swaggerUi = require("swagger-ui-express"), swaggerDocument = require("./swagger.json");
 
-mongoose.connect(MONGO_DB_CONFIG.DB, {
+mongoose.connect("mongodb+srv://arg007:Freelancer%402022@cluster0.gp52g.mongodb.net/technohack?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
