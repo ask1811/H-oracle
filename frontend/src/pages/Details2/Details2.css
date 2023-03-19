@@ -1,0 +1,26 @@
+.heading{
+    text-align: center;
+    padding-top: 20px;
+}
+.container{
+    color: white;
+}
+.bs, .re, .cp, .mv{
+    padding-left: 5px;
+}
+
+.whole{
+   background-image: url(../../Images/heart.png);
+   background-size:cover;
+min-height: 100vh;   
+}
+.control-label {
+    color: white;
+    text-decoration: none;
+}
+.g1{
+    color: #fff;
+}
+.Guide{
+    margin-top: 50px;
+}
