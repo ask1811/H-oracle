@@ -10,64 +10,64 @@ import {
     DialogContent,
     DialogContentText,
     DialogTitle,
-  } from "@mui/material";
-const Details2 = ()=>{
+} from "@mui/material";
+const Details2 = () => {
 
 
-    const addData = (e)=>{
+    const addData = (e) => {
         // console.log(e.target);
-        const {name,value} = e.target;
-        setData(()=>{
-            return{
+        const { name, value } = e.target;
+        setData(() => {
+            return {
                 ...logdata,
-                [name]:value
+                [name]: value
             }
-                
+
         })
     }
 
-    const [res,setRes] = useState({
-        data:""
+    const [res, setRes] = useState({
+        data: ""
     })
     const baseURL = "http://localhost:4000/api"
-    async function predict(){
-        await axios.post(`${baseURL}/diabetes/predict`,{
-            Age:logdata.Age,  
-            Sex:logdata.Sex,  
-            HighChol:logdata.HighChol,
-            BMI:logdata.BMI,  
-            Smoker:logdata.Smoker,  
-            PhysActivity:logdata.PhysActivity,  
-            PhysHlth:logdata.PhysHlth,  
-            Fruits:logdata.Fruits, 
-            Veggies:logdata.Veggies,  
-            HvyAlcoholConsump:logdata.HvyAlcoholConsump,  
-            Stroke:logdata.Stroke,  
-            HighBP:logdata.HighBP
-        }).then((response)=>{
+    async function predict() {
+        await axios.post(`${baseURL}/diabetes/predict`, {
+            Age: logdata.Age,
+            Sex: logdata.Sex,
+            HighChol: logdata.HighChol,
+            BMI: logdata.BMI,
+            Smoker: logdata.Smoker,
+            PhysActivity: logdata.PhysActivity,
+            PhysHlth: logdata.PhysHlth,
+            Fruits: logdata.Fruits,
+            Veggies: logdata.Veggies,
+            HvyAlcoholConsump: logdata.HvyAlcoholConsump,
+            Stroke: logdata.Stroke,
+            HighBP: logdata.HighBP
+        }).then((response) => {
             console.log(response.data)
-            setRes(()=>{
-                return{
+            setRes(() => {
+                return {
                     ...res,
-                    ["data"]:response.data.message
+                    ["data"]: response.data.message
                 }
-                    
+
             })
         })
     }
-    const [logdata,setData] = useState({
-        Age:"",  
-        Sex:"",  
-        HighChol:"",   
-        BMI:"",  
-        Smoker:"",  
-        PhysActivity:"",  
-        PhysHlth:"",  
-        Fruits:"", 
-        Veggies:"",  
-        HvyAlcoholConsump:"",  
-        Stroke:"",  
-        HighBP:""
+    const [logdata, setData] = useState({
+        Age: "",
+        Sex: "",
+        HighChol: "",
+        BMI: "",
+        Smoker: "",
+        PhysActivity: "",
+        PhysHlth: "",
+        Fruits: "",
+        Veggies: "",
+        HvyAlcoholConsump: "",
+        Stroke: "",
+        HighBP: ""
     })
 
     var _a = React.useState(null), anchorEl = _a[0], setAnchorEl = _a[1];
@@ -78,20 +78,20 @@ const Details2 = ()=>{
         setAnchorEl(null);
     };
 
-    
+
     const open = Boolean(anchorEl);
     const id = open ? 'simple-popover' : undefined;
 
     const [open1, setOpen1] = React.useState(false);
 
-  const handleClickOpen = (e) => {
-    e.preventDefault()
-    setOpen1(true);
-  };
+    const handleClickOpen = (e) => {
+        e.preventDefault()
+        setOpen1(true);
+    };
 
-  const handleClose1 = () => {
-    setOpen1(false);
-  };
+    const handleClose1 = () => {
+        setOpen1(false);
+    };
     return (
         <div className='whole'>
             <div className='container'>
@@ -114,7 +114,7 @@ const Details2 = ()=>{
                     <div class="form-group row">
                         <label className='control-label col-sm-2'>High Cholestrol :</label>
                         <div class="col-sm-3">
-                            <input type="text" class="form-control" name='HighChol' value={logdata.HighChol} onChange={addData}/>
+                            <input type="text" class="form-control" name='HighChol' value={logdata.HighChol} onChange={addData} />
                         </div>
                         <a className='control-label col-sm-2 offset-1' aria-describedby={id} variant="contained" onClick={handleClick}>Body Mass Index(BMI) :
                         </a>
@@ -131,14 +131,14 @@ const Details2 = ()=>{
                             <Typography sx={{ p: 2 }}>The content of the Popover.</Typography>
                         </Popover>
                         <div class="col-sm-3">
-                            <input type="text" class="form-control" name='BMI' value={logdata.BMI} onChange={addData}/>
+                            <input type="text" class="form-control" name='BMI' value={logdata.BMI} onChange={addData} />
                         </div>
                     </div>
                     <br />
                     <div class="form-group row">
                         <label className='control-label col-sm-2'>Are you a smoker? :</label>
                         <div class="col-sm-3">
-                            <input type="text" class="form-control" name='Smoker' value={logdata.Smoker} onChange={addData}/>
+                            <input type="text" class="form-control" name='Smoker' value={logdata.Smoker} onChange={addData} />
                         </div>
                         <a className='control-label col-sm-2 offset-1' aria-describedby={id} variant="contained" onClick={handleClick}>Physical Activity:</a>
                         <div class="col-sm-3">
@@ -153,7 +153,7 @@ const Details2 = ()=>{
                         </div>
                         <label className='control-label col-sm-2 offset-1' aria-describedby={id} variant="contained" onClick={handleClick}>Fruits :</label>
                         <div class="col-sm-3">
-                            <input type="text" class="form-control" name='Fruits' value={logdata.Fruits} onChange={addData}/>
+                            <input type="text" class="form-control" name='Fruits' value={logdata.Fruits} onChange={addData} />
                         </div>
                     </div>
                     <br />
@@ -181,12 +181,12 @@ const Details2 = ()=>{
 
                     <br />
                     <div className='row'>
-                        <input type="submit" class="btn btn-danger col-1 offset-5" value="Submit" onClick={(e)=>{
+                        <input type="submit" class="btn btn-danger col-1 offset-5" value="Submit" onClick={(e) => {
                             e.preventDefault();
                             predict()
                             handleClickOpen(e)
                             console.log(logdata)
-                        }}/>
+                        }} />
                     </div>
                 </form>
 
@@ -201,7 +201,7 @@ const Details2 = ()=>{
                 <br />
                 <h2 className='g1'>*Cholestrol: 0 = no high cholesterol, 1 = high cholesterol</h2>
                 <br />
-                <h2 className='g1'>*BMI=(Weight in Kg)/(Height in metre)</h2>
+                <h2 className='g1'>*BMI=(Weight in Kg)/(Height in metre)^2</h2>
                 <br />
                 <h2 className='g1'>*Smoker: Have you smoked at least 100 cigarettes in your entire life? [Note: 5 packs = 100 cigarettes] 0 = no 1 = yes</h2>
                 <br />
@@ -220,20 +220,20 @@ const Details2 = ()=>{
                 <h2 className='g1'>*High Blood Pressure: 0 = no High BP,1 = Yes High BP </h2>
             </div>
             <Dialog
-        open={open1}
-        onClose={handleClose1}
-        aria-labelledby="alert-dialog-title"
-        aria-describedby="alert-dialog-description"
-      >
-        <DialogTitle id="alert-dialog-title">
-          {"Message"}
-        </DialogTitle>
-        <DialogContent>
-          <DialogContentText id="alert-dialog-description">
-            {res.data}
-          </DialogContentText>
-        </DialogContent>
-      </Dialog>
+                open={open1}
+                onClose={handleClose1}
+                aria-labelledby="alert-dialog-title"
+                aria-describedby="alert-dialog-description"
+            >
+                <DialogTitle id="alert-dialog-title">
+                    {"Message"}
+                </DialogTitle>
+                <DialogContent>
+                    <DialogContentText id="alert-dialog-description">
+                        {res.data}
+                    </DialogContentText>
+                </DialogContent>
+            </Dialog>
         </div >
     )
 }
