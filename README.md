@@ -29,6 +29,7 @@ Presently we have 2 models:
 2. Predicting Diabetes
 
 FURTHER Implemetation
+
 More models covering diseaes like hypertension, Cancer, Kidney issues and so on
 Improve accuracy of models using more training data, features and better classification algorithms that fit the data 
 <br /><br />
