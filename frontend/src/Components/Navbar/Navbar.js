@@ -32,8 +32,8 @@ const Navbar = () => {
                         <span class="replies">Heart Disease</span>
                         <span class="comments"></span>
                     </a>
-                    <a href="/Login" target="_self" className='btn1'>
-                        <span class="replies">Login</span>
+                    <a  onClick={localStorage.removeItem('token')} target="_self" className='btn1'>
+                        <span class="replies">Logout</span>
                         <span class="comments"></span>
                     </a>
                 </div>

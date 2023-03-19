@@ -1,17 +1,14 @@
-import React, { useState, Link } from 'react'
+import React, { useState} from 'react'
 import axios from "axios";
-import { Input } from 'reactstrap'
 import './Login.css'
-
-const baseURL = "https://localhost:4000/api"
-
 const Login = () => {
+
     const [logdata, setData] = useState({
         email: "",
         password: ""
     })
+    const baseURL = "https://localhost:4000/api"
     const addData = (e) => {
-        // console.log(e.target);
         const { name, value } = e.target;
         setData(() => {
             return {
@@ -21,17 +18,17 @@ const Login = () => {
 
         })
     }
+
     async function login() {
         await axios
-            .post(`${baseURL}/signin`, {
-                username: logdata.username,
+            .post(`${baseURL}/auth/signin`, {
+                email: logdata.email,
                 password: logdata.password
             })
             .then((response) => {
                 console.log(response.data);
                 localStorage.setItem("token", response.data.token);
                 localStorage.setItem("userId", response.data.data[0]._id)
-                window.location.href = "/";
             });
     }
 
@@ -42,7 +39,7 @@ const Login = () => {
                     <form name="my" class="form">
                         <h2>Log In</h2>
                         <div className="input-group">
-                            <input type="text" name="email" id="loginUser" onChange={addData} value={logdata.username} required />
+                            <input type="text" name="email" id="loginUser" value = {logdata.email} onChange={addData} required />
                             <label for="loginUser">E-mail</label>
                         </div>
                         <div className="input-group">
@@ -50,21 +47,22 @@ const Login = () => {
                                 type="password"
                                 name="password"
                                 id="loginPassword"
-                                onChange={addData} value={logdata.password}
+                                value={logdata.password}
+                                onChange={addData}
                                 required
                             />
                             <label for="loginPassword">Password</label>
                         </div>
-                        <Input type="submit" value="Sign Up" class="submit-btn" onClick={(e) => {
+                        <input type="submit" value="Sign In" class="submit-btn" onClick={(e)=>{
                             e.preventDefault();
-                            console.log(logdata);
-                            signup()
-                        }} />
+                            login();
+                            window.location.href="/"
+                        }}/>
 
                     </form>
                     <br />
                     <p className='sig'>Do not have an account Click Here to Signup</p>
-                    <Link to="/Signup"><button classname='btn ' variant=" contained" >Click Here</button></Link>
+                    <a href="/signup" >Signup</a>
 
                 </div >
             </div >

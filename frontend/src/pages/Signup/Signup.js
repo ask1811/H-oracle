@@ -3,7 +3,7 @@ import axios from "axios";
 import { Input } from 'reactstrap'
 
 import './Signup.css'
-const baseURL = "https://localhost:4000/api"
+const baseURL = "http://localhost:4000/api"
 
 const Signup = () => {
     const [logdata, setData] = useState({
@@ -25,14 +25,14 @@ const Signup = () => {
 
     async function signup() {
         await axios
-            .post(`${baseURL}/signup`, {
+            .post(`${baseURL}/auth/signup`, {
                 name: logdata.name,
                 email: logdata.email,
                 password: logdata.password
             })
             .then((response) => {
                 console.log(response.data);
-                localStorage.setItem("token", response.data.token);
+                window.localStorage.setItem("token", "xxx");
                 window.location.href = "/";
             });
     }
@@ -62,7 +62,7 @@ const Signup = () => {
                         </div>
 
                         {
-                            <Input type="submit" value="Sign Up" class="submit-btn" onClick={(e) => {
+                            <Input type="submit" value="Sign up" class="submit-btn" onClick={(e) => {
                                 e.preventDefault();
                                 console.log(logdata);
                                 signup()
