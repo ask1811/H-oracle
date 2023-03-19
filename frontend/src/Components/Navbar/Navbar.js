@@ -32,10 +32,9 @@ const Navbar = () => {
                         <span class="replies">Heart Disease</span>
                         <span class="comments"></span>
                     </a>
-                    <a  onClick={localStorage.removeItem('token')} target="_self" className='btn1'>
-                        <span class="replies">Logout</span>
-                        <span class="comments"></span>
-                    </a>
+                    <button class="btn1"  onClick={() => { localStorage.removeItem('token'); window.location.href='/Login'; }}>
+                 Logout
+                </button>
                 </div>
             </div >
         )

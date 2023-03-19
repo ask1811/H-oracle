@@ -32,7 +32,7 @@ const Signup = () => {
             })
             .then((response) => {
                 console.log(response.data);
-                window.localStorage.setItem("token", "xxx");
+                localStorage.setItem("token", "xxx");
                 window.location.href = "/";
             });
     }

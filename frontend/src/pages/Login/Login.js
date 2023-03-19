@@ -7,7 +7,7 @@ const Login = () => {
         email: "",
         password: ""
     })
-    const baseURL = "https://localhost:4000/api"
+    const baseURL = "http://localhost:4000/api"
     const addData = (e) => {
         const { name, value } = e.target;
         setData(() => {
@@ -19,18 +19,19 @@ const Login = () => {
         })
     }
 
-    async function login() {
+    async function login(){
         await axios
             .post(`${baseURL}/auth/signin`, {
-                email: logdata.email,
-                password: logdata.password
+              email: logdata.email,
+              password: logdata.password
             })
             .then((response) => {
-                console.log(response.data);
-                localStorage.setItem("token", response.data.token);
-                localStorage.setItem("userId", response.data.data[0]._id)
+              console.log(response.data);
+              localStorage.setItem("token",response.data.token);
+              localStorage.setItem("userId",response.data.data[0]._id)
+              window.location.href = "/";
             });
-    }
+      }
 
     return (
         <div className='motham'>
@@ -54,9 +55,10 @@ const Login = () => {
                             <label for="loginPassword">Password</label>
                         </div>
                         <input type="submit" value="Sign In" class="submit-btn" onClick={(e)=>{
+                            
                             e.preventDefault();
+                            console.log(logdata)
                             login();
-                            window.location.href="/"
                         }}/>
 
                     </form>
