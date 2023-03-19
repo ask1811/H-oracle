@@ -214,6 +214,10 @@ const  Details = ()=>{
                     </div>
                 </form>
 
+                <div class="modal-body">
+                  <p></p>
+                </div>
+              </div>
             </div>
             <Dialog
         open={open1}

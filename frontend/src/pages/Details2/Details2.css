@@ -18,6 +18,9 @@ min-height: 100vh;
     color: white;
     text-decoration: none;
 }
-.flex-container {
-    display: flex;
-  }
+.g1{
+    color: #fff;
+}
+.Guide{
+    margin-top: 50px;
+}
