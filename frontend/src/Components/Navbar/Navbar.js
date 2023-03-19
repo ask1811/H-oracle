@@ -32,9 +32,9 @@ const Navbar = () => {
                         <span class="replies">Heart Disease</span>
                         <span class="comments"></span>
                     </a>
-                    <button class="btn1"  onClick={() => { localStorage.removeItem('token'); window.location.href='/Login'; }}>
-                 Logout
-                </button>
+                    <button class="btn4" onClick={() => { localStorage.removeItem('token'); window.location.href = '/Login'; }}>
+                        Logout
+                    </button>
                 </div>
             </div >
         )

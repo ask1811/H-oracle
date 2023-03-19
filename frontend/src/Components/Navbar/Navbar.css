@@ -8,7 +8,7 @@ body {
 }
 
 .nav {
-  height: 60px;
+  height: 75px;
   width: 100%;
   background-color: #000;
   display: flex;
@@ -112,4 +112,11 @@ body {
 }
 .nav> .nav-links> a> .replies{
   font-size: 22px;
+}
+.nav > .nav-links > .btn4{
+color: white;
+background-color: red;
+border-radius: 5px;
+border-width: 0px;
+padding: 1px 5px 1px 5px;
 }

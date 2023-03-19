@@ -1,4 +1,4 @@
-import React, { useState} from 'react'
+import React, { useState } from 'react'
 import axios from "axios";
 import './Login.css'
 const Login = () => {
@@ -19,19 +19,19 @@ const Login = () => {
         })
     }
 
-    async function login(){
+    async function login() {
         await axios
             .post(`${baseURL}/auth/signin`, {
-              email: logdata.email,
-              password: logdata.password
+                email: logdata.email,
+                password: logdata.password
             })
             .then((response) => {
-              console.log(response.data);
-              localStorage.setItem("token",response.data.token);
-              localStorage.setItem("userId",response.data.data[0]._id)
-              window.location.href = "/";
+                console.log(response.data);
+                localStorage.setItem("token", response.data.token);
+                localStorage.setItem("userId", response.data.data[0]._id)
+                window.location.href = "/";
             });
-      }
+    }
 
     return (
         <div className='motham'>
@@ -40,7 +40,7 @@ const Login = () => {
                     <form name="my" class="form">
                         <h2>Log In</h2>
                         <div className="input-group">
-                            <input type="text" name="email" id="loginUser" value = {logdata.email} onChange={addData} required />
+                            <input type="text" name="email" id="loginUser" value={logdata.email} onChange={addData} required />
                             <label for="loginUser">E-mail</label>
                         </div>
                         <div className="input-group">
@@ -54,21 +54,26 @@ const Login = () => {
                             />
                             <label for="loginPassword">Password</label>
                         </div>
-                        <input type="submit" value="Sign In" class="submit-btn" onClick={(e)=>{
-                            
+                        <input type="submit" value="Sign In" class="submit-btn" onClick={(e) => {
+
                             e.preventDefault();
                             console.log(logdata)
                             login();
-                        }}/>
+                        }} />
 
                     </form>
                     <br />
-                    <p className='sig'>Do not have an account Click Here to Signup</p>
-                    <a href="/signup" >Signup</a>
+                    <p className='sig'>Do not have an account
+
+                        <a href='/Signup'>
+                            <button className='logbtn'>Signup</button>
+                        </a>
+                    </p>
+
 
                 </div >
             </div >
-        </div>
+        </div >
     )
 }
 

@@ -7,7 +7,6 @@
   }
   .form {
     position: relative;
-    
     width: 380px;
     padding: 80px 40px 40px;
     background: black;
@@ -125,5 +124,17 @@
   }
 .motham{
   background-color: violet;
-  min-height: 100vh;
+  max-height: 850px;
+}
+.logbtn{
+  transition-duration: 0.4s;
+  border-color: red;
+  border-width: 3px;
+  background-color: red;
+  color: white;
+  margin-left: 10px;
+}
+.logbtn:hover {
+  background-color: red;
+ 
 }
