@@ -9,10 +9,13 @@
     position: relative;
     width: 380px;
     padding: 80px 40px 40px;
-    background: black;
+    background: rgb(129, 2, 2);
     border-radius: 10px;
     color: #ffff;
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 15px 25px rgba(124, 2, 2, 0.5);
+    border-color: #fff;
+    border-width: 10px;
+    margin-top: 20px;
   }
   .form::before {
     content: "";
@@ -21,7 +24,7 @@
     left: 0;
     width: 50%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(14, 12, 12, 0.08);
     transform: skewX(-26deg);
     transform-origin: bottom left;
     border-radius: 10px;
@@ -87,7 +90,7 @@
   }
 
   .sig{
-    color: red;
+    color: white;
     text-decoration: none;
   }
 
@@ -123,7 +126,7 @@
     color: inherit;
   }
 .motham{
-  background-color: violet;
+  background-color: black;
   max-height: 850px;
 }
 .logbtn{

@@ -54,7 +54,7 @@ const Login = () => {
                             />
                             <label for="loginPassword">Password</label>
                         </div>
-                        <input type="submit" value="Sign In" class="submit-btn" onClick={(e) => {
+                        <input type="submit" value="Log In" class="submit-btn" onClick={(e) => {
 
                             e.preventDefault();
                             console.log(logdata)
