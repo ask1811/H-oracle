@@ -23,6 +23,7 @@ develop an ML model that can predict if a person is prone depending on data such
 medical parameters. Based on the prediction from this application the, user is given the knowledge of which 
 specialist to consult. 
 We aim to become an asistant to doctors and other medical staff
+
 Presently we have 2 models:
 1. Predicting Heart problems
 2. Predicting Diabetes
@@ -50,7 +51,6 @@ DATASETS
  -[Heart problems](https://www.kaggle.com/datasets/venkatkarthick/heartcsv)
  -[Diabetes](https://www.kaggle.com/datasets/alexteboul/diabetes-health-indicators-dataset)
 
- <br /><br />
  DOCS
   - [NodeJs](https://nodejs.org/en/docs)
   - [React](https://reactjs.org/docs/getting-started.html)
