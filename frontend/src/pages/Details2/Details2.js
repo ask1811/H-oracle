@@ -191,33 +191,43 @@ const Details2 = () => {
                 </form>
 
             </div >
-            <div className='Guide'>
-                <h1 className='g1'>Guidelines to Enter Details</h1>
-                <h2 className='g1'>*Age: If age is between 18-24 Enter 1</h2>
-                <h2 className='g1'>  1 = 18-24 / 2 = 25-29 / 3 = 30-34 / 4 = 35-39 / 5 = 40-44 / 6 = 45-49 / 7 = 50-54 / 8 = 55-59 / 9 = 60-64 / 10 = 65-69 / 11 = 70-74 / 12 = 75-79 / 13 = 80 or older
-                </h2>
-                <br />
-                <h2 className='g1'>*Gender: 1: male, 0: female</h2>
-                <br />
-                <h2 className='g1'>*Cholestrol: 0 = no high cholesterol, 1 = high cholesterol</h2>
-                <br />
-                <h2 className='g1'>*BMI=(Weight in Kg)/(Height in metre)^2</h2>
-                <br />
-                <h2 className='g1'>*Smoker: Have you smoked at least 100 cigarettes in your entire life? [Note: 5 packs = 100 cigarettes] 0 = no 1 = yes</h2>
-                <br />
-                <h2 className='g1'>*Physical Activity: Physical Activity in past 30 days - not including job 0 = no 1 = yes</h2>
-                <br />
-                <h2 className='g1'>*Physical Health: How many injuries you have had in the past 30 days (Physical illness or injury days in past 30 days scale 1-30)</h2>
-                <br />
-                <h2 className='g1'>*Fruits: Do you Consume Fruits 1 or more times per day 0 = no 1 = yes</h2>
-                <br />
-                <h2 className='g1'>*Vegetables: Do you consume Vegetables 1 or more times per day 0 = no 1 = yes</h2>
-                <br />
-                <h2 className='g1'> *Heavy Alcohol Consumption: (adult men more than or equal to 14 drinks per week and adult women more than or equal to 7 drinks per week) 0 = no 1 = yes</h2>
-                <br />
-                <h2 className='g1'> *Stroke: Have you ever had a stroke. 0 = no, 1 = yes</h2>
-                <br />
-                <h2 className='g1'>*High Blood Pressure: 0 = no High BP,1 = Yes High BP </h2>
+            <div className='Guide container'>
+                <div className='row'>
+                    <h1 className='heading'>Guidelines to Enter Details</h1>
+                </div>                
+                <div>
+                <h5>*Age: If age is between 18-24 Enter 1</h5>
+                </div>
+                <h5>  1 = 18-24 / 2 = 25-29 / 3 = 30-34 / 4 = 35-39 / 5 = 40-44 / 6 = 45-49 / 7 = 50-54 / 8 = 55-59 / 9 = 60-64 / 10 = 65-69 / 11 = 70-74 / 12 = 75-79 / 13 = 80 or older
+                </h5>
+                <div className='row'>
+                <h5>*Gender: 1: male, 0: female</h5>
+                </div>                
+                
+                <h5 >*Cholestrol: 0 = no high cholesterol, 1 = high cholesterol</h5>
+                
+                <h5>*BMI=(Weight in Kg)/(Height in metre)^2</h5>
+                
+                <h5>*Smoker: Have you smoked at least 100 cigarettes in your entire life? [Note: 5 packs = 100 cigarettes] 0 = no 1 = yes</h5>
+                
+                <h5>*Physical Activity: Physical Activity in past 30 days - not including job 0 = no 1 = yes</h5>
+                
+                <h5>*Physical Health: How many injuries you have had in the past 30 days (Physical illness or injury days in past 30 days scale 1-30)</h5>
+                
+                <h5>*Fruits: Do you Consume Fruits 1 or more times per day 0 = no 1 = yes</h5>
+                
+                <h5>*Vegetables: Do you consume Vegetables 1 or more times per day 0 = no 1 = yes</h5>
+                
+                <h5> *Heavy Alcohol Consumption: (adult men more than or equal to 14 drinks per week and adult women more than or equal to 7 drinks per week) 0 = no 1 = yes</h5>
+                
+                <h5> *Stroke: Have you ever had a stroke. 0 = no, 1 = yes</h5>
+                
+                <h5>*High Blood Pressure: 0 = no High BP,1 = Yes High BP </h5>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
             </div>
             <Dialog
                 open={open1}
