@@ -7,7 +7,7 @@ import Navbar from './Components/Navbar/Navbar';
 import Login from './pages/Login/Login';
 import Details from './pages/Details/Details';
 import Details2 from './pages/Details2/Details2';
-
+import Footer from './Components/Footer/Footer';
 function App() {
   return (
     <div className="App">
@@ -20,6 +20,7 @@ function App() {
           <Route path='/Login' element={<Login />} />
           <Route path='/Signup' element={<Signup />} />
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </div>
   );
