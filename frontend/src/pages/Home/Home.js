@@ -16,8 +16,8 @@ const Home = () => {
                                 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                                 mollit anim id est laborum.
                             </p>
-                            <p className='col-3 offset-1'> To check health, enter details here<button type="button" class="btn btn-danger "><a href='/Details' className='dtl'>Details</a></button></p>
-
+                            <p className='col-3 offset-1'> To check if you have a Heart Disease, enter details here<button type="button" class="btn btn-danger "><a href='/Details' className='dtl'>Click Here</a></button></p>
+                            <p className='col-3 offset-1'> To check if you have a Diabetes, enter details here<button type="button" class="btn btn-danger "><a href='/Details2' className='dtl'>Click here</a></button></p>
                         </div>
 
                     </div>

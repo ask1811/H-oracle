@@ -24,11 +24,18 @@ const Navbar = () => {
 
                 <div class="nav-links">
 
+                    <a href="/Details2" target="_self" className='btn1'>
+                        <span class="replies">Diabetes</span>
+                        <span class="comments"></span>
+                    </a>
+                    <a href="/Details" target="_self" className='btn1'>
+                        <span class="replies">Heart Disease</span>
+                        <span class="comments"></span>
+                    </a>
                     <a href="/Login" target="_self" className='btn1'>
                         <span class="replies">Login</span>
                         <span class="comments"></span>
                     </a>
-
                 </div>
             </div >
         )
